@@ -20,6 +20,10 @@
 *.out
 *.app
 
+# Shit
+*.vscode
+*.idea
+
 checkerboard.ppm
 
 build
