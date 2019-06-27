@@ -20,7 +20,7 @@ Sphere::Sphere(glm::vec3 const& midpoint, float radius):
         name_ = "";
     }
 
-Sphere::Sphere(glm::vec3 const &midpoint, float radius, std::string const &name, Color const &color):
+Sphere::Sphere(glm::vec3 const& midpoint, float radius, std::string const& name, Color const& color):
     midpoint_{midpoint}, radius_{radius}
     {
         name_ = name;
@@ -33,4 +33,11 @@ float Sphere::area() const{
 
 float Sphere::volume() const{
     return (4.0f/3.0f) * M_PI * (radius_ * radius_ * radius_);
+}
+
+std::ostream& Sphere::print(std::ostream& os) const {
+    os << "name of sphere: " << name_ << "\n" << "position: " << midpoint_.x << "/" << midpoint_.y << "/" <<
+    midpoint_.z << "  radius: " << radius_ << "\ncolor(RGB%): " << color_.r << "|" << color_.g << "|" << color_.b << "\n" <<
+    "area: " << area() << " volume: " << volume();
+    return os;
 }

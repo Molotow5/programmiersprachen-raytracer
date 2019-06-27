@@ -18,6 +18,7 @@ class Box: public Shape{
 
         float volume() const override;
 
+    std::ostream& print(std::ostream& os) const override;
 
     private:
 
