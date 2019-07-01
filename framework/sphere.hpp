@@ -1,6 +1,8 @@
 #ifndef SPHERE_HPP
 #define SPHERE_HPP
 #include <glm/vec3.hpp>
+#include "hitpoint.hpp"
+#include "ray.hpp"
 #include "shape.hpp"
 
 
@@ -19,6 +21,10 @@ class Sphere: public Shape{
         float volume() const override;
 
         std::ostream& print(std::ostream& os) const override ;
+
+        HitPoint intersect(Ray const& ray) const;
+
+        ~Sphere();
 
     private:
 

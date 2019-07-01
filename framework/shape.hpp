@@ -18,6 +18,8 @@ class Shape {
 
         virtual std::ostream& print(std::ostream& os) const = 0;
 
+        /*virtual*/ ~Shape();
+
     protected:
 
         std::string name_;

@@ -32,6 +32,6 @@ std::ostream& Box::print(std::ostream &os) const{
     os << "name of box: " << name_ << "\n" << "point 1: " << axis_aligned_min_.x << "/" << axis_aligned_min_.y << "/" <<
     axis_aligned_min_.z << "  point 2: " << axis_aligned_max_.x << "/" << axis_aligned_max_.y << "/" <<
     axis_aligned_max_.z << "\ncolor(RGB%): " << color_.r << "|" << color_.g << "|" << color_.b << "\n" <<
-    "area : " << area() << "  volume: " << volume();
+    "area : " << area() << "  volume: " << volume() << "\n";
     return os;
 }
